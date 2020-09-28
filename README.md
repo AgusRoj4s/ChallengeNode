@@ -15,3 +15,7 @@ comandos utilizados para librerias:
 Herramientas utilizadas:
 node/graphql/mongoose/robo3t/JTW/typeScript/apollo
 
+
+https://raw.githubusercontent.com/AgusRojas12/ChallengeNode/master/screen/Captura.png
+
+
