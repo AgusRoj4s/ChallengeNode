@@ -1,0 +1,137 @@
+mutation CreateRecipe{
+  createRecipe(input: {
+    name: "Arroz ", 
+    description: "Arroz con pescados",
+  	ingredients: "Arroz, pescado, queso",
+  	category: "Pescados"}) 
+  {
+    name
+    description
+    ingredients
+    category{
+      name
+    }
+    id
+	}
+}
+
+query getAllRecipes{
+  recipes(limit: 3) {
+    recipeFeed{     
+      name
+      id
+      category{
+        name
+      }
+    }
+    pageInfo{
+      nextPageCursor
+      hasNextPage
+    }
+  }  
+}
+
+query getRecipeById{
+  recipe(id: ""){
+    name
+    ingredients
+    description
+    category{
+      name
+    }
+  }
+}
+
+mutation updateRecipe{
+  updateRecipe(id: ""
+    input: { 
+      name: "Cafe sabor a vainillas", 
+      description: "Cafe, esencia de vainilla, medialunas",
+    	ingredients: "Cafe con leche y medialunas",}
+  ){  
+    id 
+    name
+    description
+    ingredients
+    category{
+      name
+    }
+  }
+}
+
+mutation deleteRecipe{
+  deleteRecipe(id : ""){
+    name
+    id
+  	ingredients
+    description
+    category{
+      name
+    }
+  }
+}
+
+
+mutation createCategory{
+  createCategory(input:{
+    name: "Pescados"})
+  {
+    name
+    id
+  }
+}
+
+query getCategoryById{
+  category(id: ""){
+    name
+    id
+  }
+}
+
+query getCategoryByName{
+  categoryName(input: {
+    name: "Pasteleria"
+  } ){
+    name
+    id
+  }
+}
+
+query getRecipesByCategory{
+  categoryName(input: {
+    name: "Pasteleria"
+  } ){
+    name
+    recipes{
+      name
+      id
+      ingredients
+      description
+    }
+  }  
+}
+
+query getAllCategories{
+  categories(skip: 0 ,limit: 10){
+    id
+    name
+  }
+}
+
+mutation updateCategory{
+  updateCategory(id: ""
+    input: { 
+      name: "Tortas con frutas"} 
+  ){  
+  id 
+  name
+  }
+}
+
+mutation deleteCategory{
+  deleteCategory(id : ""){
+    name
+    id
+  }
+}
+

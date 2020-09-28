@@ -1,0 +1,33 @@
+# Write your query or mutation here
+query getUser{
+  user{
+    id
+    name
+    email
+    recipes{
+      name
+    }
+  }
+}
+
+mutation createUser{
+  signup(input: {
+    name: "fran",
+    email: "fran@gmail.com"
+    password: "123456"
+  }) {
+    id
+    name
+    email
+  }
+}
+
+mutation login{
+  login(input: {
+    email:  "mica@gmail.com",
+    password: "123456"
+  }){
+    token
+  }
+}
+
