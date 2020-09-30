@@ -1,5 +1,6 @@
 # ChallengeNode
 
+ejecutar npm install node
 comandos utilizados para librerias:
 -npm install -d nodemon
 -npm install mongoose
